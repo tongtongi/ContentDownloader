@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="material_grid_0.5x">2dp</dimen>
+    <dimen name="material_grid_1x">4dp</dimen>
+    <dimen name="material_grid_2x">8dp</dimen>
+    <dimen name="material_grid_4x">16dp</dimen>
+    <dimen name="material_grid_6x">24dp</dimen>
+    <dimen name="material_grid_8x">32dp</dimen>
+    <dimen name="material_grid_10x">40dp</dimen>
+    <dimen name="material_grid_12x">48dp</dimen>
+    <dimen name="material_grid_18x">72dp</dimen>
+
+    <dimen name="large_text_size">16sp</dimen>
+    <dimen name="normal_text_size">14sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+</resources>

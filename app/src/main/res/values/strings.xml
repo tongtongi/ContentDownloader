@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">ContentDownloader</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="text_play">Play</string>
+    <string name="text_download">Download</string>
+    <string name="text_pause">Pause</string>
+    <string name="text_download_ratio">%1$s/%2$s</string>
+    <string name="action_add">addUrl</string>
+    <string name="add_url">Add</string>
+    <string name="text_delete">Delete</string>
+    <string name="template_url">https://bit.ly/30aWVDP</string>
+    <string name="text_hint">Click + button to add video url to download</string>
+    <string name="title_add_content_url">Add content Url</string>
+    <string name="title_delete_content">Delete Content</string>
+    <string name="delete_confirmation_message">Are you sure you want to delete?</string>
+    <string name="error_text_add_url">Please enter a valid url!</string>
 </resources>

@@ -1,13 +1,38 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = "1.3.72"
+    ext.libraryVersion = [
+            gradle        : "4.0.0",
+            kotlin        : "1.3.72",
+            hilt          : "2.28-alpha",
+            hilt_compiler : "1.0.0-alpha01",
+            retrofit      : "2.9.0",
+            okHttp        : "4.7.2",
+            coroutines    : "1.3.7",
+            recyclerview  : "1.2.0-alpha03",
+            fragment_ktx  : "1.2.5",
+            cardView      : "1.0.0",
+            room          : "2.2.5",
+            lottie        : "3.0.0",
+            material      : "1.1.0",
+            junit         : "4.13",
+            archcore      : "2.1.0",
+            mockito       : "2.27.0",
+            mockitoInline : "2.27.0",
+            mockitoKotlin : "2.2.0",
+            coroutinesTest: "1.3.7",
+            espresso      : "3.2.0",
+            testrules     : "1.3.0-rc01",
+            testextjunit  : "1.1.2-rc01",
+            hiltAndroid   : "2.28-alpha"
+    ]
     repositories {
         google()
         jcenter()
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.1"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$libraryVersion.kotlin"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$libraryVersion.hilt"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files

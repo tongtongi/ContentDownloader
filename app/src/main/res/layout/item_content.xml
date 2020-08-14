@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/material_grid_4x"
+    android:layout_marginEnd="@dimen/material_grid_4x"
+    app:cardCornerRadius="@dimen/material_grid_1x">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/material_grid_2x"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="FILE NAME" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDownloadRatio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewName"
+            tools:text="10 MB/100 MB" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:max="100"
+            android:padding="@dimen/material_grid_6x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDownloadRatio"
+            tools:progress="50" />
+
+        <Button
+            android:id="@+id/buttonDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/material_grid_2x"
+            android:backgroundTint="@color/offWhite"
+            android:drawableStart="@drawable/ic_download"
+            android:drawablePadding="@dimen/material_grid_1x"
+            android:text="@string/text_download"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/buttonDelete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/buttonDelete" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/offWhite"
+            android:drawableStart="@drawable/ic_delete"
+            android:drawablePadding="@dimen/material_grid_1x"
+            android:text="@string/text_delete"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@id/buttonDownload"
+            app:layout_constraintEnd_toStartOf="@id/buttonPlay"
+            app:layout_constraintStart_toEndOf="@+id/buttonDownload"
+            app:layout_constraintTop_toBottomOf="@id/progressBar" />
+
+        <Button
+            android:id="@+id/buttonPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/offWhite"
+            android:drawableStart="@drawable/ic_play_circle"
+            android:drawablePadding="@dimen/material_grid_1x"
+            android:text="@string/text_play"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@id/buttonDownload"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonDelete"
+            app:layout_constraintTop_toTopOf="@id/buttonDelete" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
