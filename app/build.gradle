@@ -15,7 +15,19 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.example.contentdownloader.CustomTestRunner"
+    }
+
+    android {
+        sourceSets {
+            String sharedTestDir = 'src/sharedTest/java'
+            test {
+                java.srcDir sharedTestDir
+            }
+            androidTest {
+                java.srcDir sharedTestDir
+            }
+        }
     }
 
     buildTypes {
@@ -51,12 +63,6 @@ dependencies {
     kapt "com.google.dagger:hilt-android-compiler:$libraryVersion.hilt"
     kapt "androidx.hilt:hilt-compiler:$libraryVersion.hilt_compiler"
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:$libraryVersion.hilt_compiler"
-
-    // Retrofit - HTTP - REST
-    implementation "com.squareup.retrofit2:retrofit:$libraryVersion.retrofit"
-    implementation "com.squareup.retrofit2:converter-gson:$libraryVersion.retrofit"
-    implementation "com.squareup.retrofit2:converter-moshi:$libraryVersion.retrofit"
-    implementation "com.squareup.retrofit2:converter-scalars:$libraryVersion.retrofit"
 
     //OkHttp
     implementation "com.squareup.okhttp3:okhttp:$libraryVersion.okHttp"
